@@ -1,9 +1,9 @@
-
+import Main from "../main/Main";
 
 function App() {
   return (
     <div className="App">
-testing
+      <Main />
     </div>
   );
 }
