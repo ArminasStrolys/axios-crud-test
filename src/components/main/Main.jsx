@@ -13,7 +13,7 @@ const Main = () => {
     );
   }, []);
 
-  console.log(userData)
+  console.log(userData);
 
   return (
     <div>
@@ -21,7 +21,17 @@ const Main = () => {
       <br />
       {userData.length > 1 &&
         userData.map((user) => (
-          <User key={user.id} name={user.first_name} surname={user.last_name} avatar={user.avatar} />
+          <User
+            key={user.id}
+            name={user.first_name}
+            surname={user.last_name}
+            avatar={user.avatar}
+            city={user.address.city}
+            state={user.address.state}
+            street={user.address.street_address}
+            gender={user.gender}
+            socialId={user.social_insurance_number}
+          />
         ))}
     </div>
   );
