@@ -18,6 +18,7 @@ const User = (props) => {
       <p style={{position:"relative", bottom:"30px", left:"20px"}}><b>Address:</b> {props.city}, {props.state}. {props.street}.</p>
       <p style={{position:"relative", bottom:"40px", left:"20px"}}><b>Gender:</b> {props.gender}.</p>
       <p style={{position:"relative", bottom:"50px", left:"90px"}}><b>Soc. num.:</b> {props.socialId}.</p>
+      <button style={{position:"relative", bottom:"112px", right:"40px", backgroundColor: "white", width:"20px", height:"20px", textAlign:"center", color: "red", lineHeight:"10px"}}>+</button>
     </div>
   );
 };
