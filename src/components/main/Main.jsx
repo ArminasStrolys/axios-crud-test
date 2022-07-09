@@ -8,7 +8,7 @@ const Main = () => {
   useEffect(() => {
     Axios.get("https://random-data-api.com/api/users/random_user?size=5").then(
       (data) => {
-        setUserData(data);
+        setUserData(data.data);
       }
     );
   }, []);
@@ -20,8 +20,9 @@ const Main = () => {
       <h2 style={{ textAlign: "center" }}>Main page</h2>
       <br />
       {userData.length > 1 &&
-        userData.map((user) => <User name={user.first_name} />)}
-      <User />
+        userData.map((user) => (
+          <User name={user.first_name} surname={user.last_name} />
+        ))}
     </div>
   );
 };
