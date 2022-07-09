@@ -13,7 +13,7 @@ const Main = () => {
     );
   }, []);
 
-  console.log(userData.data);
+  console.log(userData)
 
   return (
     <div>
@@ -21,7 +21,7 @@ const Main = () => {
       <br />
       {userData.length > 1 &&
         userData.map((user) => (
-          <User name={user.first_name} surname={user.last_name} />
+          <User key={user.id} name={user.first_name} surname={user.last_name} avatar={user.avatar} />
         ))}
     </div>
   );
