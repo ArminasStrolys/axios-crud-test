@@ -1,6 +1,13 @@
 import React from "react";
 
 const User = (props) => {
+
+const sendNames = (e) => {
+    e.preventDefault()
+    props.getNames(props.name, props.surname)
+    console.log(props.name, props.surname)
+}
+
   return (
     <div
       style={{
@@ -30,7 +37,7 @@ const User = (props) => {
       <p style={{ position: "relative", bottom: "50px", left: "90px" }}>
         <b>Soc. num.:</b> {props.socialId}.
       </p>
-      <button
+      <button onClick={sendNames}
         style={{
           position: "relative",
           bottom: "112px",

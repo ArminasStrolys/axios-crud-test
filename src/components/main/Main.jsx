@@ -13,6 +13,19 @@ const Main = () => {
     );
   }, []);
 
+
+
+const getNames = (name, surname) => {
+    updateUser(name, surname)
+}
+
+const updateUser = (name, surname) => {
+    Axios.put("http://localhost:3001/update", {
+      name: name,
+      surname: surname,
+    })
+  };
+
   console.log(userData);
 
   return (
@@ -31,6 +44,7 @@ const Main = () => {
             street={user.address.street_address}
             gender={user.gender}
             socialId={user.social_insurance_number}
+            getNames={getNames}
           />
         ))}
     </div>
