@@ -18,7 +18,7 @@ const User = (props) => {
       />
       <span style={{ position: "relative", right: "70px", bottom: "18px" }}>
         <b>
-          {props.name} {props.surname}
+          {props.name} <span style={{ color: "darkRed" }}>{props.surname}</span>
         </b>
       </span>
       <p style={{ position: "relative", bottom: "30px", left: "20px" }}>
