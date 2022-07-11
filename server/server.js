@@ -7,12 +7,10 @@ let path = '../src/data/data.txt';
 
 app.put("/update", (req, res) => {
 
-    const name = 'tester'
-    // const name = req.body.name;
-    const surname = "surname.test"
-    // const surname = req.body.surname;
+    const name = 'Name'
+    const surname = "Surname"
 
-    let buffer = new Buffer(surname);
+    let buffer = new Buffer(surname + ' ' + name);
  
     fs.open(path, 'w', function(err, fd) {
         if (err) {
